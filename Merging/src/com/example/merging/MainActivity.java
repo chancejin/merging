@@ -1,14 +1,14 @@
 /*
- * 친구목록 화면을 대신 하는 부분임!
- * 상대의 상태에 따라 다음 액티비티가 바뀌게 되는데,
- * 여기서는
+ * 移쒓뎄紐⑸줉 �솕硫댁쓣 ���떊 �븯�뒗 遺�遺꾩엫!
+ * �긽���쓽 �긽�깭�뿉 �뵲�씪 �떎�쓬 �븸�떚鍮꾪떚媛� 諛붾�뚭쾶 �릺�뒗�뜲,
+ * �뿬湲곗꽌�뒗
  * 
- * 0-비장애인
- * 1-청각장애인
- * 2-언어장애인
- * 3-청각,언어장애인
+ * 0-鍮꾩옣�븷�씤
+ * 1-泥�媛곸옣�븷�씤
+ * 2-�뼵�뼱�옣�븷�씤
+ * 3-泥�媛�,�뼵�뼱�옣�븷�씤
  * 
- * 으로 표현하였다.
+ * �쑝濡� �몴�쁽�븯���떎.
  * 
  * */
 
@@ -33,7 +33,7 @@ public class MainActivity extends Activity implements OnClickListener{
 		setContentView(R.layout.activity_main);
 		
 
-		System.out.println("넘어옴.");
+		System.out.println("�꽆�뼱�샂.");
 		
 		btn_text = (Button)findViewById(R.id.btn_text);
 		btn_text.setOnClickListener(this);
@@ -62,11 +62,11 @@ public class MainActivity extends Activity implements OnClickListener{
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 
-		System.out.println("넘기자.");
+		System.out.println("�꽆湲곗옄.");
 
-		System.out.println("넘기자2.");
-        startActivity(new Intent(this,SttTextCommunication.class));
+		System.out.println("�꽆湲곗옄2.");
+        startActivity(new Intent(this,TextCommunication.class));
 
-		System.out.println("넘기자3");
+		System.out.println("�꽆湲곗옄3");
 	}
 }
