@@ -29,7 +29,7 @@ public class TtsTextCommunication extends Activity implements OnClickListener,On
 	private TextToSpeech tts;
 	
 	Socket client;
-	String ip = "10.200.28.42";
+	String ip = "192.168.10.104";
 	int port = 50000;
 	
 	Thread thread;
@@ -40,8 +40,10 @@ public class TtsTextCommunication extends Activity implements OnClickListener,On
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
+		System.out.println("아하하하하하");
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_textcommunication);
+		setContentView(R.layout.activity_ttstextcommunication);
+		System.out.println("넘어옴!");
 		
 		btn_connect = (Button)findViewById(R.id.btn_connect);
 		btn_send = (Button)findViewById(R.id.btn_send);
@@ -55,7 +57,7 @@ public class TtsTextCommunication extends Activity implements OnClickListener,On
 				super.handleMessage(msg);
 				Bundle bundle = msg.getData();
 				textView.append(bundle.getString("msg")+"\n");
-				//TTS����߰�
+				//TTS����߰�
 				speakOut();
 			}
 		};

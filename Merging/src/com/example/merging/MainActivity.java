@@ -61,12 +61,7 @@ public class MainActivity extends Activity implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-
-		System.out.println("�꽆湲곗옄.");
-
-		System.out.println("�꽆湲곗옄2.");
-        startActivity(new Intent(this,TextCommunication.class));
-
-		System.out.println("�꽆湲곗옄3");
+		System.out.println("눌림!");
+        startActivity(new Intent(this,TtsTextCommunication.class));
 	}
 }
