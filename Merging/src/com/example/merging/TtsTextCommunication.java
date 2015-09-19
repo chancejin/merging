@@ -57,7 +57,6 @@ public class TtsTextCommunication extends Activity implements OnClickListener,On
 				super.handleMessage(msg);
 				Bundle bundle = msg.getData();
 				textView.append(bundle.getString("msg")+"\n");
-				//TTS����߰�
 				speakOut();
 			}
 		};
@@ -67,6 +66,7 @@ public class TtsTextCommunication extends Activity implements OnClickListener,On
 	}
 	
 	public void connect(){
+		//new TextServer();
 		thread = new Thread(){
 			public void run(){
 				super.run();

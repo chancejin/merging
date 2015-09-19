@@ -23,7 +23,7 @@ public class ClientThread extends Thread{
 		this.handler = handler;
 		try{
 			this.client = client;
-			
+			System.out.println("클라이언트쓰레드생성");
 			bufferReader = new BufferedReader(new InputStreamReader(client.getInputStream()));
 			bufferWriter = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
 		}catch(IOException e){
@@ -63,6 +63,7 @@ public class ClientThread extends Thread{
 	// 여기서 변수에 따라 run을 나눠서 receive를 할지 말지 생각해야함!
 	public void run(){
 		super.run();
+		System.out.println("쓰레드 run!");
 		receive();
 	}
 }
