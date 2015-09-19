@@ -32,9 +32,6 @@ public class MainActivity extends Activity implements OnClickListener{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-
-		System.out.println("�꽆�뼱�샂.");
-		
 		btn_text = (Button)findViewById(R.id.btn_text);
 		btn_text.setOnClickListener(this);
 	}

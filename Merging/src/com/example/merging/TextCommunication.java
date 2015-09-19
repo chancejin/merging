@@ -1,4 +1,3 @@
-
 package com.example.merging;
 
 import java.io.IOException;
@@ -23,7 +22,7 @@ public class TextCommunication extends Activity implements OnClickListener{
 	EditText editText;
 	
 	Socket client;
-	String ip = "10.200.28.42";
+	String ip = "192.168.10.104";
 	int port = 50000;
 	
 	Thread thread;
