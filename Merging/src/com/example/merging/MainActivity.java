@@ -1,16 +1,16 @@
 /*
- * 移쒓뎄紐⑸줉 �솕硫댁쓣 ���떊 �븯�뒗 遺�遺꾩엫!
- * �긽���쓽 �긽�깭�뿉 �뵲�씪 �떎�쓬 �븸�떚鍮꾪떚媛� 諛붾�뚭쾶 �릺�뒗�뜲,
- * �뿬湲곗꽌�뒗
+ * 연락처에 클릭하면 넘어와야 하는 click 메소드가 존재하는 곳!
+ * DB에 접근해서 상대의 장애 상태를 파악하여 그 값에 따라 다음 activity를 다르게 해야 한다.
+ * 이 때,
+ * 0 - 비장애인
+ * 1 - 청각장애
+ * 2 - 언어장애
+ * 3 - 청각+언어 장애
+ * 라고 한다.
  * 
- * 0-鍮꾩옣�븷�씤
- * 1-泥�媛곸옣�븷�씤
- * 2-�뼵�뼱�옣�븷�씤
- * 3-泥�媛�,�뼵�뼱�옣�븷�씤
- * 
- * �쑝濡� �몴�쁽�븯���떎.
- * 
+ * 나의 장애상태도 파악해야 하는데, 이는 설정에 저장하도록 하든지.. 아니면 역시 DB 접근하든지..
  * */
+
 
 package com.example.merging;
 
@@ -61,7 +61,8 @@ public class MainActivity extends Activity implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		System.out.println("눌림!");
-        startActivity(new Intent(this,TtsTextCommunication.class));
+		// 연락처 눌렀을 때 여기로 클릭되어야한다는거!!!!!
+		// 이때 DB에 접근해서 상대의 장애상태에 따라 다음 activity를 다르게 해야함!!
+        startActivity(new Intent(this,TextCommunication.class));
 	}
 }

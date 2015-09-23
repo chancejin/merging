@@ -29,7 +29,7 @@ public class TtsTextCommunication extends Activity implements OnClickListener,On
 	private TextToSpeech tts;
 	
 	Socket client;
-	String ip = "192.168.10.104";
+	String ip = "192.168.0.27";
 	int port = 50000;
 	
 	Thread thread;
