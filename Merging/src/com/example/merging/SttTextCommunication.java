@@ -26,8 +26,8 @@ public class SttTextCommunication extends Activity implements OnClickListener{
 	EditText editText;
 	
 	Socket client;
-	String ip = "192.168.0.27";
-	int port = 50000;
+	String ip = "14.63.226.208";
+	int port = 8080;
 	
 	Thread thread;
 	
