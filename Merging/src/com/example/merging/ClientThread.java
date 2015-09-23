@@ -31,6 +31,16 @@ public class ClientThread extends Thread{
 		}
 	}
 	
+	//상대 번호 보내기
+	public void sendDest(String destination){
+		try{
+			bufferWriter.write("dest "+destination);
+			bufferWriter.flush();
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+	
 	//보내기
 	public void send(String text){
 		try{
