@@ -23,8 +23,8 @@ public class TextCommunication extends Activity implements OnClickListener{
 	EditText editText;
 	
 	Socket client;
-	String ip = "10.200.28.42";
-	int port = 50000;
+	String ip = "14.63.226.208";
+	int port = 8080;
 	
 	Thread thread;
 	
