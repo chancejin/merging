@@ -40,10 +40,8 @@ public class TtsTextCommunication extends Activity implements OnClickListener,On
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
-		System.out.println("아하하하하하");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ttstextcommunication);
-		System.out.println("넘어옴!");
 		
 		btn_connect = (Button)findViewById(R.id.btn_connect);
 		btn_send = (Button)findViewById(R.id.btn_send);
@@ -57,7 +55,7 @@ public class TtsTextCommunication extends Activity implements OnClickListener,On
 				super.handleMessage(msg);
 				Bundle bundle = msg.getData();
 				textView.append(bundle.getString("msg")+"\n");
-				//TTS����߰�
+				//TTS
 				speakOut();
 			}
 		};

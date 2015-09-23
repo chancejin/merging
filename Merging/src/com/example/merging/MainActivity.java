@@ -62,6 +62,6 @@ public class MainActivity extends Activity implements OnClickListener{
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		System.out.println("눌림!");
-        startActivity(new Intent(this,TtsTextCommunication.class));
+        startActivity(new Intent(this,SttTextCommunication.class));
 	}
 }

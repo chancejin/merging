@@ -31,6 +31,16 @@ public class ClientThread extends Thread{
 		}
 	}
 	
+	// send Destination's phone number
+	public void sendDest(String phone){
+		try {
+			bufferWriter.write("dest "+phone+"\n");
+			bufferWriter.flush();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	//보내기
 	public void send(String text){
 		try{
@@ -48,6 +58,22 @@ public class ClientThread extends Thread{
 		try{
 			while(true){
 				msg = bufferReader.readLine();
+				if(msg.startsWith("StartCall ")){
+					// change the activity according to it and its destination's state
+					switch(Integer.valueOf(msg.substring(10, 11))){
+						case 0:
+							
+							break;
+						case 1:
+							
+							break;
+						case 2:
+							
+							break;
+						case 3:
+							break;
+					}	
+				}
 				Message m = new Message();
 				Bundle bundle = new Bundle();
 				bundle.putString("msg", msg);
