@@ -41,7 +41,7 @@ public class ClientThread extends Thread{
 		}
 	}
 	
-	//보내기
+	// 
 	public void send(String text){
 		try{
 			System.out.println(text);
@@ -52,7 +52,7 @@ public class ClientThread extends Thread{
 		}
 	}
 	
-	//받기
+	//諛쏄린
 	public String receive(){
 		String msg = null;
 		try{
@@ -74,6 +74,9 @@ public class ClientThread extends Thread{
 							break;
 					}	
 				}
+				else if(msg.startsWith("StopCall ")){
+					client.close();
+				}
 				Message m = new Message();
 				Bundle bundle = new Bundle();
 				bundle.putString("msg", msg);
@@ -86,7 +89,7 @@ public class ClientThread extends Thread{
 		return msg;
 	}
 	
-	// 여기서 변수에 따라 run을 나눠서 receive를 할지 말지 생각해야함!
+	// Calling to destination
 	public void run(){
 		super.run();
 		receive();
